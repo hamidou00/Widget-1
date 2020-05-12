@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/app.js" type="module"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script> </script>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+<!-- ********************************* SYNTHETISEUR ********************************* -->
+        <section class="synthetiseur">
+            <div class="effects">
+
+                Volume<span class="volumeLabel">0</span> <input class="volume" type="range" min="0" max="0.5" step="0.01" value="0.1">
+                Pan<span class="panLabel">1</span> <input class="pan" type="range" min="-1" max="1" step="0.01" value="0">
+                
+                Oscillator
+                <select name="" id="oscillatorType">
+                    <option value="sine">sine</option>
+                    <option value="square">square</option>
+                    <option value="sawtooth">sawtooth</option>
+                    <option value="triangle">triangle</option>
+                </select>
+            </div>
+        </section>
+
+<!-- ********************************* SHEMA ********************************* -->
+        <section class="Audio-Node-Shema">
+            <article class="source">
+                <div class="node-fixe" id="osc" data-active-node="true">Oscillator</div>
+            </article>
+    
+    
+    
+            <article class="filter">
+                <div class="node" id="gain" data-active-node="true">Volume(gain) <div class="pastille"></div> </div> 
+                <div class="node" id="pan" data-active-node="true">Pan <div class="pastille"></div> </div>
+                <!-- <div class="node" id="oscType" data-active-node="true">OscillatorType</div> -->
+            </article >
+    
+    
+    
+            <article class="output">
+                <div class="node-fixe">Output(sortie)</div>
+            </article>
+        </section>
+
+<!-- ********************************* CONECTER ********************************* -->
+        <section class="connecter">
+            <div id="connection">connecter</div>
+        </section>
+        <div class="stop">stop</div>
+    </main>
+    <!-- <div id="divTest"></div> -->
+    
+    
+</body>
+</html>

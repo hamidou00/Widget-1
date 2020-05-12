@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url("../assets/image/background1.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section{
+    margin-top: 25px;
+    /* border-radius: 7px;
+    border: 5px solid; */
+}
+
+.synthetiseur{
+    
+    box-shadow: 18px 13px 12px -9px rgba(74,74,74,0.3);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 700px;
+}
+
+#piano{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .note{
+        flex: 1;
+        border: 1px solid black;
+        height: 100px;
+        background: lightgrey;
+        text-align: center;
+        
+    }
+
+    .note:first-child{
+        border-bottom-left-radius: 10px;
+        
+    }
+
+    .note:last-child{
+        border-bottom-right-radius: 10px;
+        
+    }
+
+    .note:hover{
+        background: lightsteelblue;
+    }
+
+    .note:active{
+        background: lightslategrey;
+    }
+
+    
+
+
+#divTest{
+    width: 100px;
+    height: 100px;
+    background: black;
+}
+
+progress{
+    margin-top: 100px;
+}
+
+.effects{
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    background: grey;
+    padding: 50px;
+}
+
+.note .note-label{
+    color: white;
+    width: 100%;
+    
+    background: grey;
+    /* border: 1px solid black; */
+    border-radius: 0 0 2px 2px;
+}
+
+/* ****************** Le shema  *******************/
+
+.Audio-Node-Shema{
+    
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    width: 500px;
+}
+
+.Audio-Node-Shema article{
+    /* background: black; */
+    border: 1px solid black;
+    width: calc(100% / 3);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+/* .Audio-Node-Shema article:first-child{
+    background: blue;
+} */
+
+.node{
+    height: 25px;
+    width: 100px;
+    line-height: 25px;
+    border-radius: 25px;
+    background:  lightgrey;
+    text-align: center;
+    position: relative;
+}
+
+.node-fixe{
+    border-radius: 25px;
+    height: 25px;
+    width: 100px;
+    background:  lightgrey;
+    text-align: center;
+}
+
+.pastille{
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border-radius: 25px;
+    background: #c6ffb8;
+    box-shadow: 0px 0px 36px 5px rgba(198,255,184,1);
+    transition: ease 0.1s;
+    right: -7px;
+    top: 5px;
+}
+
+.pastille-desactive{
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border-radius: 25px;
+    background: #ffa4a4;
+    box-shadow: 0px 0px 0px 0px;
+    border: 0.1px black solid;
+    right: -7px;
+    top: 5px;
+    transition: ease 0.1s;
+}
+
+/* .node:hover{
+    background: blue;
+}
+
+.node:active{
+    background: yellow;
+} */
+
+/* Connecter */
+.connecter{
+    
+}
+
+.connecter div{
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    
+    background: grey;
+    border-radius: 25px;
+}
+
+.connecter div:hover{
+    background: blue;
+}
+
+.connecter div:active{
+    background: yellow;
+}
+
+.stop{
+    position: absolute;
+    background: red;
+    width: 50px;
+    height: 50px;
+    left: 10px;
+    top: 10px;
+}
